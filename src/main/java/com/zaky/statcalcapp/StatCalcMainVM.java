@@ -40,6 +40,8 @@ public class StatCalcMainVM {
     private int bonusLuk;
     private int totalLuk;
     
+    private int test;
+    
     
     private List<Integer> pRenew = new ArrayList<Integer>();
     
