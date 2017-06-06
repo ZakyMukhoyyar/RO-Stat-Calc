@@ -1,0 +1,130 @@
+<?page id="index" title="Ragnarok Stat Calculator"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <window apply="org.zkoss.bind.BindComposer"
+    width="50%" position="center" mode="overlapped"
+    viewModel="@id('vm') @init('com.zaky.statcalcapp.StatCalcMainVM')">
+        <groupbox closable="false" mold="3d" width="100%">
+            <caption  label="Status Calculator"/>
+            <groupbox closable="true" mold="3d" width="100%">
+                <caption  label="Character"/>
+                <grid style="border:0">
+                    <columns  sizable="false">
+                        <column width="10%"/>
+                        <column width="20%"/>
+                        <column width="10%"/>
+                        <column width="10%"/>
+                        <column width="55%"/>
+                    </columns>
+                    <rows>
+                        <row>
+                            <label value="Name : "/>
+                            <textbox width="100%"/>
+                            <label value="Base Lv : "/>
+                            <combobox width="100%"/>
+                            <combobox/>
+                        </row>
+                        <row>
+                            <label value="Class : "/>
+                            <combobox width="100%" readonly="true"/>
+                            <label value="Job Lv : "/>
+                            <combobox width="100%"/>
+                        </row>
+                    </rows>
+                </grid>
+            </groupbox>
+            <groupbox closable="true" mold="3d" width="100%">
+                <caption label="Stats Information"/>
+                <grid style="border:0">
+                    <columns sizable="false">
+                        
+                        <column width="2%"/>
+                        <column width="5%"/>
+                        <column width="1.5%"/>
+                        <column width="1%"/>
+                        
+                        <column width="2%"/>
+                        <column width="5%"/>
+                        <column width="1.5%"/>
+                        <column width="1%"/>
+                        
+                        <column width="2%"/>
+                        <column width="5%"/>
+                        <column width="1.5%"/>
+                        <column width="1%"/>
+                    </columns>
+                    <rows>
+                        <row>
+                            <label value="Str : "/>
+                            <combobox width="100%"/>
+                            <label value="+10"/>
+                            <label value="(9)"/>
+                            
+                            <label value="Agi : "/>
+                            <combobox width="100%"/>
+                            <label value="+10"/>
+                            <label value="(9)"/>
+                            
+                            <label value="Vit : "/>
+                            <combobox width="100%"/>
+                            <label value="+10"/>
+                            <label value="(9)"/>
+                        </row>
+                        <row>
+                            <label value="Int : "/>
+                            <combobox width="100%"/>
+                            <label value="+10"/>
+                            <label value="(9)"/>
+                            
+                            <label value="Dex : "/>
+                            <combobox width="100%"/>
+                            <label value="+10"/>
+                            <label value="(9)"/>
+                            
+                            <label value="Luk : "/>
+                            <combobox width="100%"/>
+                            <label value="+10"/>
+                            <label value="(9)"/>
+                        </row>
+                    </rows>
+                </grid>
+            </groupbox>
+            <groupbox closable="true" mold="3d" width="100%">
+                <caption label="Basics Information"/>
+                <grid style="border:0">
+                    <columns>
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                        <column width="12.5%" align="center" />
+                    </columns>
+                    <rows>
+                        <row>
+                            <label value="MAX HP"/>
+                            <label value="MAX SP"/>
+                            <label value="HIT"/>
+                            <label value="FLEE"/>
+                            <label value="C.RATE"/>
+                            <label value="ATK"/>
+                            <label value="MATK"/>
+                            <label value="ASPD"/>
+                        </row>
+                        <row>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                            <doublebox value="0" disabled="true" width="100%" style="text-align: center"/>
+                        </row>
+                    </rows>
+                </grid>
+            </groupbox>            
+        </groupbox>
+    </window>
+</zk>
