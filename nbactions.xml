@@ -10,4 +10,18 @@
                 <skipTests>true</skipTests>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-jetty:run debug</actionName>
+            <displayName>jetty:run debug</displayName>
+            <goals>
+                <goal>jetty:run</goal>
+                <goal>-Dconfig.acction.home="D:\Code\mavconfig"</goal>
+                <goal>-Derror.url="D:\Code\error_log\\"</goal>
+            </goals>
+            <properties>
+                <Env.MAVEN_OPTS>-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m "-javaagent:C:/Program Files/Java/JRebel/jrebel.jar"</Env.MAVEN_OPTS>
+                <skipTests>true</skipTests>
+                <jpda.listen>maven</jpda.listen>
+            </properties>
+        </action>
     </actions>

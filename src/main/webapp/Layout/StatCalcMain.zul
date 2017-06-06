@@ -1,8 +1,8 @@
 <?page id="index" title="Ragnarok Stat Calculator"?>
 <zk xmlns="http://www.zkoss.org/2005/zul">
     <window apply="org.zkoss.bind.BindComposer"
-    width="50%" position="center" mode="overlapped"
-    viewModel="@id('vm') @init('com.zaky.statcalcapp.StatCalcMainVM')">
+            width="50%" position="center" mode="overlapped"
+            viewModel="@id('vm') @init('com.zaky.statcalcapp.StatCalcMainVM')">
         <groupbox closable="false" mold="3d" width="100%">
             <caption  label="Status Calculator"/>
             <groupbox closable="true" mold="3d" width="100%">
@@ -20,14 +20,26 @@
                             <label value="Name : "/>
                             <textbox width="100%"/>
                             <label value="Base Lv : "/>
-                            <combobox width="100%"/>
+                            <combobox model="@load(vm.baseLv)" placeholder="1" readonly="true" width="100%">
+                                <template name="model" var="item">
+                                    <comboitem label="@load(item)" value="@load(item)"/>
+                                </template>
+                            </combobox>
                             <combobox/>
                         </row>
                         <row>
                             <label value="Class : "/>
-                            <combobox width="100%" readonly="true"/>
+                            <combobox model="@load(vm.clas)" placeholder="Novice" readonly="true" width="100%">
+                                <template name="model" var="item">
+                                    <comboitem label="@load(item)" value="@load(item)"/>
+                                </template>
+                            </combobox>                            
                             <label value="Job Lv : "/>
-                            <combobox width="100%"/>
+                            <combobox model="@load(vm.jobLv)" placeholder="1" readonly="true" width="100%">
+                                <template name="model" var="item">
+                                    <comboitem label="@load(item)" value="@load(item)"/>
+                                </template>
+                            </combobox>
                         </row>
                     </rows>
                 </grid>
@@ -38,50 +50,50 @@
                     <columns sizable="false">
                         
                         <column width="2%"/>
-                        <column width="5%"/>
+                        <column width="2%"/>
                         <column width="1.5%"/>
                         <column width="1%"/>
                         
                         <column width="2%"/>
-                        <column width="5%"/>
+                        <column width="2%"/>
                         <column width="1.5%"/>
                         <column width="1%"/>
                         
                         <column width="2%"/>
-                        <column width="5%"/>
+                        <column width="2%"/>
                         <column width="1.5%"/>
                         <column width="1%"/>
                     </columns>
                     <rows>
                         <row>
                             <label value="Str : "/>
-                            <combobox width="100%"/>
+                            <combobox width="100%" placeholder="1"/>
                             <label value="+10"/>
                             <label value="(9)"/>
                             
                             <label value="Agi : "/>
-                            <combobox width="100%"/>
+                            <combobox width="100%" placeholder="1"/>
                             <label value="+10"/>
                             <label value="(9)"/>
                             
                             <label value="Vit : "/>
-                            <combobox width="100%"/>
+                            <combobox width="100%" placeholder="1"/>
                             <label value="+10"/>
                             <label value="(9)"/>
                         </row>
                         <row>
                             <label value="Int : "/>
-                            <combobox width="100%"/>
+                            <combobox width="100%" placeholder="1"/>
                             <label value="+10"/>
                             <label value="(9)"/>
                             
                             <label value="Dex : "/>
-                            <combobox width="100%"/>
+                            <combobox width="100%" placeholder="1"/>
                             <label value="+10"/>
                             <label value="(9)"/>
                             
                             <label value="Luk : "/>
-                            <combobox width="100%"/>
+                            <combobox width="100%" placeholder="1"/>
                             <label value="+10"/>
                             <label value="(9)"/>
                         </row>
