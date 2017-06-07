@@ -46,26 +46,66 @@ public class StatCalcMainVM {
     @Init
     public void init(Component comp) throws Exception {
         name = "Name";
-        
         clas.add("Novice");
+        /* 1st Job Variant */
         clas.add("Swordman");
-        clas.add("asds");
+        clas.add("Mage");
+        clas.add("Archer");
+        clas.add("Merchant");
+        clas.add("Thief");
+        clas.add("Acolyte");
+        /* 2-1 Job Variant */
+        clas.add("Knight");
+        clas.add("Wizard");
+        clas.add("Hunter");
+        clas.add("Blacksmith");
+        clas.add("Assassin");
+        clas.add("Priest");
+        /* 2-2 Job Variant */
+        clas.add("Crusader");
+        clas.add("Sage");
+        clas.add("Bard");
+        clas.add("Dancer");
+        clas.add("Alchemist");
+        clas.add("Rogue");
+        clas.add("Monk");
+        /* 2-1 Trans-Job Variant */
+        clas.add("Lord Knight");
+        clas.add("High Wizard");
+        clas.add("Sniper");
+        clas.add("WhiteSmith");
+        clas.add("Assassin Cross");
+        clas.add("High Priest");
+        /* 2-2 Trans-Job Variant */
+        clas.add("Paladin");
+        clas.add("Scholar");
+        clas.add("Minstrel");
+        clas.add("Gypsy");
+        clas.add("Biochemist");
+        clas.add("Stalker");
+        clas.add("Champion");
+        /* 3-1 Third-Job Variant */
+        clas.add("");
+        clas.add("");
+        clas.add("");
+        clas.add("");
+        clas.add("");
+        clas.add("");
         
-        for(int i=1;i<100;i++){
+
+        for (int i = 1; i < 100; i++) {
             baseLv.add(i);
         }
-        for(int i=1;i<51;i++){
+        for (int i = 1; i < 51; i++) {
             jobLv.add(i);
         }
-        for(int i=1;i<100;i++){
+        for (int i = 1; i < 100; i++) {
             stats.add(i);
         }
-        
 
     }
-    
-    /*Setter Getter*/
 
+    /*Setter Getter*/
     public int getBasicStr() {
         return basicStr;
     }
@@ -249,5 +289,5 @@ public class StatCalcMainVM {
     public void setStats(List<Integer> stats) {
         this.stats = stats;
     }
-    
+
 }
